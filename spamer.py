@@ -56,12 +56,13 @@ print()
 
 content_message = Write.Input("[?] what you wanna say ->", Colors.purple, interval=0.005)
 print()
-number = int(Write.Input("[?] how manny time you want to repeat the message ->", Colors.purple, interval=0.005))
+number = int(Write.Input("[?] how many time you want to repeat the message ->", Colors.purple, interval=0.005))
+print()
 
 for i in range(number):
-    webhook_url = "https://discord.com/api/webhooks/985856019840237618/opDyjvsd025DgAd6TLWek_cID1zYjqAU85C7kMEXIjMO8LV0hB80skjCBcUej7B9NwUe"
     message = '\n'.join([content_message
                 ])
     r = requests.post(webhook_url, json={'username': 'wp bot', 'content': message})
 
+print()
 Write.Input("[!] messages sent to the webhook", Colors.purple, interval=0.005)
